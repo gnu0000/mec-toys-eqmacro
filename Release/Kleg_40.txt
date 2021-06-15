@@ -1,0 +1,264 @@
+; Everquest Social Macro and HotButton dump file 1.0
+; This file was originally created with EQMacro v1.0
+;
+; This file contains a dump of all the Social Macros and 
+; All the Hot Button definitions from the following everquest
+; chartacter opt file: Kleg_40.opt
+; You can add, delete and change information in this file
+; and then use EQMacro to load these back into the opt file
+
+
+; Social Macro's
+; --------------
+; There is one section for each defined social macro.  The format
+; of a social macro dump is:
+;
+; [Social Page#.Button# Name]
+; TextLine#1
+; ...
+; TextLine#5
+;
+; Where:
+;  Page# is a number from (1 - 10) specifying the socials page where
+;   the macro is located.
+;  Button# is a number from (1 - 12) specifying the location of the 
+;   social macro on the social page.  The button order is left to right,
+;   top to bottom.
+;  Name is the text to display on the Button (max length 8 chars)
+;  TextLine# is up to 5 lines of macro text (max length 59 chars)
+;
+; You may add additional macro's as needed.  Make sure the Page/Button 
+; is unique if you add additional macro's
+;
+; Also supported is the following Extended format:
+; [XSocial Page#.Button# Name]
+; OneLongTextLine
+;
+; Where:
+;  OneLongTextLine is a single line of macro text (max length 299 chars)
+;  This is experimental, and you cannot properly edit/view the macro from EQ.
+;
+[Social 1.1 Afk]
+/afk
+
+
+
+
+[Social 1.2 Anon]
+/anon
+
+
+
+
+[Social 1.3 Split]
+/autosplit
+
+
+
+
+[Social 1.4 Bug]
+/bug
+
+
+
+
+[Social 1.5 Consider]
+/con
+
+
+
+
+[Social 1.6 Duel]
+/duel
+
+
+
+
+[Social 1.7 Feedbk]
+/feedback
+
+
+
+
+[Social 1.8 Hail]
+/hail
+
+
+
+
+[Social 1.9 Played]
+/played
+
+
+
+
+[Social 1.10 Time]
+/time
+
+
+
+
+[Social 1.11 GM List]
+/who all GM
+
+
+
+
+[Social 1.12 Wave]
+/wave
+
+
+
+
+[Social 2.1 Loc]
+/loc
+
+
+
+
+[Social 2.2 roar]
+/raise
+/pause 10
+/roar
+
+
+[Social 2.4 test12]
+/pause 20, /say testing a b c d e f g h i j k l m n o p q r
+/say testing 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
+/say testing a b c d e f g h i j k l m n o p q r s t u v w
+00000000001111111111222222222233333333334444444444555556789
+
+[Social 2.7 Incom]
+/gsay Incoming a %t
+
+
+
+
+[Social 2.10 AAAAAA]
+aaaaa
+bbbbb
+ccccc
+ddddd
+eeeee
+[Social 3.1 Test1]
+/say This is test button number 1
+/pause 6, /loc
+/doability 1
+/book 35
+
+[Social 3.2 Test2]
+/say This is test button number 2
+/pause 6, /loc
+/doability 1
+/gsay test!
+
+[Social 3.3 Test3]
+/say This is test button number 3
+/pause 6, /loc
+/doability 1
+/cast 1
+
+[Social 3.4 Test4]
+/say This is test button number 4
+/pause 6, /loc
+/doability 1
+/cast 1
+/pause 40, cast 2
+[Social 3.5 Test5]
+/say This is test button number 5
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.6 Test6]
+/say This is test button number 6
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.7 Test7]
+/say This is test button number 7
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.8 Test8]
+/say This is test button number 8
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.9 Test9]
+/say This is test button number 9
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.10 Test10]
+/say This is test button number 10
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.11 Test11]
+/say This is test button number 11
+/pause 6, /loc
+/doability 1
+
+
+[Social 3.12 Test12]
+/say This is test button number 11
+/pause 6, /loc
+/doability 1
+
+
+
+
+
+; HotButtons
+; ----------
+; The [HotButtons] section defines all of the HotButtons
+; There is one line for each button definition.  The definition
+; format is as follows:
+;
+; HotButtonPage#.HotButtonLocation# = Type.Instance
+;
+; Where:
+;  HotButtonPage# is the HotButton page for the button (1 - 10)
+;  HotButtonLocation#  is the HotButton location for the button
+;   (1 - 10).  The button order is top to bottom, left to right.
+;  Type is the type of the macro button. The following Button 
+;   types are supported:
+;		MainCombat	- Melee and Range combat  (1)
+;		ClassCombat	- Class specific combats  (2)
+;		Ability		- Abilities				  (3)
+;		Social		- Socials				  (4)
+;		Inventory	- Inventory Slots		  (5)
+;		Main		- Main screen Buttons	  (6)
+;		Spell		- Spell Buttons	  (8)
+;  Instance is a name or number that identifies the specific instance 
+;  of the button. Valid Instance names depend on the Type:
+;    	Valid Instances for Type Main: Who, Invite, Disband, Camp, Sit, 
+;    	  	Walk, Help, Options, View, Persona, Spells
+;	 	Valid Instances for MainCombat: Melee, Range
+;	 	Valid Instances for Inventory: PosChest, PosGeneral1 thru PosGeneral8
+;  	 	Valid Instances for Social: Any social name or page#.Button#
+;	For all other Types, the Instance must be specified via index.
+;
+;  For example these are all valid Type/Instance pairs:
+;	   Main.Help	  	Inventory.PosGeneral5   Social.Feedbk
+;	   Main.Persona	  	Inventory.PosChest	  	Social.Hail
+;	   MainCombat.Range	Ability.2	  			Social.2.3
+;
+[HotButtons]
+1.1 = MainCombat.Melee
+1.3 = Main.Spells
+1.4 = Ability.3
+1.5 = Ability.1
+1.6 = Ability.2
+1.7 = Social.Loc
+1.8 = Social.Incom
+2.1 = Social.Test1
+2.4 = Social.Test10
+
+
